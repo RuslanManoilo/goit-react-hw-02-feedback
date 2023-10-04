@@ -12,7 +12,6 @@ class App extends Component {
 
   addFeedback = (evt) => {
     const option = evt.currentTarget.id;
-    // this.countPositiveFeedbackPercentage()
     
     this.setState((prevState) => {
       return {
@@ -33,7 +32,8 @@ class App extends Component {
 
   render() {
       return (
-        <div>
+        <>
+
           <FeedbackOptions 
             options = { Object.keys(this.state) }
             onLeaveFeedback = { this.addFeedback } 
@@ -46,7 +46,7 @@ class App extends Component {
             total = { this.countTotalFeedback() } 
             positivePercentage = { this.countPositiveFeedbackPercentage() } 
           />
-        </div>
+        </>
       )
   }
 };

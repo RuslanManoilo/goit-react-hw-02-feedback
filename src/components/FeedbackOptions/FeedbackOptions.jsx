@@ -1,14 +1,18 @@
-const FeedbackOptions = ({onLeaveFeedback, options}) => {
+import { Btn, Container, Title } from "./FeedbackOptions.styled";
+
+const FeedbackOptions = ({onLeaveFeedback, options, title}) => {
     return (
-        <div className="feedback">
-            <h2>Please leave feedback</h2>
+        <Container>
+            <Title>
+                Please leave feedback
+            </Title>
 
             {options.map(option => (
-                <button id={option} key={option} onClick={onLeaveFeedback}>
-                    {option}
-                </button>)
+                <Btn id={option} key={option} onClick={onLeaveFeedback}>
+                    {(option).toUpperCase()}
+                </Btn>)
             )}
-        </div>
+        </Container>
     )
 };
 

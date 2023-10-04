@@ -1,23 +1,26 @@
+import { Container, Notification, Statistic, Title, Wrapper } from "./Statistics.styled";
+
 const Statistics = ({good, neutral, bad, total, positivePercentage = '0'}) => {
     return (
-        <div className="statistics">
-            <h2>Statistics</h2>
+        <Container>
+            <Title>
+                Statistics
+            </Title>
 
             {total > 0 ? (
-                <div>
-                    <span>Good: {good}</span>
-                    <span>Neutral: {neutral}</span>
-                    <span>Bad: {bad}</span>
-                    <span>Total: {total}</span>
-                    <span>Positive feedback: {positivePercentage}%</span>
-                </div>
-            ) : (
-                <p>There is no feedback</p>
+                <Wrapper>
+                    <Statistic>Good: {good}</Statistic>
+                    <Statistic>Neutral: {neutral}</Statistic>
+                    <Statistic>Bad: {bad}</Statistic>
+                    <Statistic>Total: {total}</Statistic>
+                    <Statistic>Positive feedback: {positivePercentage}%</Statistic>
+                </Wrapper>
+                ) : (
+                <Notification>
+                    There is no feedback
+                </Notification>
             )}
-
-            
-
-        </div>
+        </Container>
     )
 };
 
