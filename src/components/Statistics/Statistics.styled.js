@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-    width: 50%;
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    background-color: #000;
-    color: #3b8a68;
-`;
-
-export const Title = styled.h2`
-    font-size: 28px;
-`;
 
 export const Wrapper = styled.div`
     display: flex;
